@@ -1,0 +1,177 @@
+.takker
+    background-image: url("/baggrund.gif")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+    &__hero
+        background: linear-gradient(135deg, rgb(41, 24, 25) 60%, #d0000b 100%)
+        color: white
+        padding: 50px 70px
+
+        h1
+            font-family: "h1Font", sans-serif
+            font-size: 40px
+            font-weight: bold
+            line-height: 1.1
+
+    &__content
+        padding: 60px 70px
+        display: flex
+        flex-direction: column
+        gap: 70px
+
+    &__intro
+        max-width: 750px
+
+        p
+            font-size: 19px
+            line-height: 1.3
+            font-family: "pFont", sans-serif
+
+    &__sponsors
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        h2
+            font-family: "h1Font", sans-serif
+            font-size: 36px
+            font-weight: bold
+            margin-bottom: 17px
+
+        &-sub
+            font-size: 16px
+            margin-bottom: 30px
+            max-width: 489px
+            text-align: center
+
+.sponsors__grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 16px
+
+.sponsor-card
+    display: flex
+    align-items: center
+    gap: 14px
+    padding: 16px 20px
+    border: 0.5px solid #ddd
+    border-radius: 8px
+    transition: border-color 180ms ease, box-shadow 180ms ease
+
+    &:hover
+        border-color: #d0000b
+        box-shadow: 0 4px 16px rgba(208, 0, 11, 0.08)
+
+    &__initial
+        width: 40px
+        height: 40px
+        min-width: 40px
+        border-radius: 50%
+        background: rgb(41, 24, 25)
+        color: #d0000b
+        font-family: "h1Font", sans-serif
+        font-size: 18px
+        font-weight: bold
+        display: flex
+        align-items: center
+        justify-content: center
+
+    p
+        font-size: 14px
+        font-weight: 500
+        color: #222
+        font-family: "pFont", sans-serif
+
+.sponsors__list
+    display: flex
+    flex-direction: column
+
+.sponsor-gruppe
+    display: grid
+    grid-template-columns: 100px 1fr
+    border-bottom: 0.5px solid #eee
+
+    &:last-child
+        border-bottom: none
+
+    &__year
+        padding: 24px 20px
+        border-right: 2px solid #d0000b
+
+        span
+            font-family: "h1Font", sans-serif
+            font-size: 22px
+            font-weight: bold
+            color: #d0000b
+
+    &__navne
+        display: flex
+        flex-direction: column
+        padding: 12px 0
+
+.sponsor-raekke
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 24px
+    gap: 70px
+
+    &__navn
+        font-size: 17px
+        font-weight: 800
+        font-family: "pFont", sans-serif
+
+    &__belob
+        font-size: 16px
+        font-weight: 700
+        font-family: "pFont", sans-serif
+
+@media (max-width: 768px)
+    .takker
+        &__hero
+            padding: 40px 25px
+
+            h1
+                font-size: 28px
+
+        &__content
+            padding: 30px 20px
+            gap: 40px
+
+        &__intro
+            max-width: 100%
+
+            p
+                font-size: 16px
+
+        &__sponsors
+            h2
+                font-size: 26px
+
+            &-sub
+                font-size: 14px
+
+    .sponsors__grid
+        grid-template-columns: 1fr
+
+    .sponsor-gruppe
+        grid-template-columns: 70px 1fr
+
+        &__year
+            padding: 16px 10px
+
+            span
+                font-size: 16px
+
+    .sponsor-raekke
+        padding: 10px 14px
+        gap: 10px
+        flex-wrap: wrap
+
+        &__navn
+            font-size: 14px
+
+        &__belob
+            font-size: 13px
